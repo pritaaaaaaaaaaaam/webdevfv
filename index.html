@@ -5,506 +5,443 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pritam | Personal Website </title>
 <style>
-
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
-
 body {
-  font-family: sans-serif;
-  background: #000;
-  color: #fff;
-  overflow-x: hidden;
+font-family: sans-serif;
+background: #000;
+color: #fff;
+overflow-x: hidden;
 }
-
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: transparent;
-  z-index: 100; 
-  transition: background 0.4s ease;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 40px;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+background: transparent;
+z-index: 100;
+transition: background 0.4s ease;
 }
-
 header:hover {
-
-  color: red;
-  backdrop-filter: blur(8px);
+color: red;
+backdrop-filter: blur(8px);
 }
-
 header h1 {
-  font-size: 24px;
+font-size: 24px;
 }
-
 nav {
-  display: flex;
-  gap: 28px;
+display: flex;
+gap: 28px;
 }
-
 nav a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 14px;
-  position: relative;
-  transition: color 0.3s;
+color: #fff;
+text-decoration: none;
+font-size: 14px;
+position: relative;
+transition: color 0.3s;
 }
-
 nav a:hover {
-  color: #ccc;
+color: #ccc;
 }
-
 nav a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 1px;
-  bottom: -4px;
-  left: 0;
-  background: #fff;
-  transition: width 0.35s ease;
+content: '';
+position: absolute;
+width: 0;
+height: 1px;
+bottom: -4px;
+left: 0;
+background: #fff;
+transition: width 0.35s ease;
 }
-
 nav a:hover::after {
-  width: 100%;
+width: 100%;
 }
-
 .hero {
-  height: 100vh;
-  background-image: url('bground.jpeg');
-  background-size: cover;
-  background-position: center;
+height: 100vh;
+background-image: url('bground.jpeg');
+background-size: cover;
+background-position: center;
 }
-
 section {
-  padding: 80px 40px;
-  position: relative;
+padding: 80px 40px;
+position: relative;
 }
-
 #about {
-  display: flex;
-  justify-content: flex-end;
+display: flex;
+justify-content: flex-end;
 }
-
 .aboutContent {
-  max-width: 800px;
+max-width: 800px;
 }
-
 .aboutLabel {
-  font-size: 14px;
-  margin-bottom: 20px;
-  color: #bbbbbb;
+font-size: 14px;
+margin-bottom: 20px;
+color: #bbbbbb;
 }
-
 .aboutText {
-  line-height: 1.6;
-  font-size: 16px;
+line-height: 1.6;
+font-size: 16px;
 }
-
 #projectsTitle {
-  font-size: 18px;
-  letter-spacing: 4px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  color: #bbbbbb;
-  display: inline-block;
-  transition: all 0.4s ease;
+font-size: 18px;
+letter-spacing: 4px;
+margin-bottom: 20px;
+text-transform: uppercase;
+color: #bbbbbb;
+display: inline-block;
+transition: all 0.4s ease;
 }
-
 #projectsTitle:hover {
-  letter-spacing: 6px;
-  color: #ffffff;
-  transform: scale(1.02);
+letter-spacing: 6px;
+color: #ffffff;
+transform: scale(1.02);
 }
-
 .projects {
-  display: flex;
-  flex-direction: column;
+display: flex;
+flex-direction: column;
 }
-
 .projectItem {
-  height: 160px;
-  display: flex;
-  align-items: center;
-  padding: 0 30px;
-  border-top: 1px solid #222;
-  border-bottom: 1px solid #222;
-  text-decoration: none;
-  color: #fff;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.45s ease;
+height: 160px;
+display: flex;
+align-items: center;
+padding: 0 30px;
+border-top: 1px solid #222;
+border-bottom: 1px solid #222;
+text-decoration: none;
+color: #fff;
+position: relative;
+overflow: hidden;
+transition: all 0.45s ease;
 }
-
 .projectItem:hover {
-  background: rgba(20,20,20,0.4);
-  transform: translateX(12px);
+background: rgba(20,20,20,0.4);
+transform: translateX(12px);
 }
-
 .projectBg {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.35;
-  transition: opacity 0.5s ease, transform 0.6s ease;
-  transform: scale(1.05);
+position: absolute;
+inset: 0;
+background-size: cover;
+background-position: center;
+opacity: 0.35;
+transition: opacity 0.5s ease, transform 0.6s ease;
+transform: scale(1.05);
 }
-
 .projectItem:hover .projectBg {
-  opacity: 0.70;
-  transform: scale(1.12);
+opacity: 0.70;
+transform: scale(1.12);
 }
-
 .projectContent {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  align-items: center;
-  transition: transform 0.4s ease;
+position: relative;
+display: flex;
+justify-content: space-between;
+width: 100%;
+align-items: center;
+transition: transform 0.4s ease;
 }
-
 .projectItem:hover .projectContent {
-  transform: translateX(-8px);
+transform: translateX(-8px);
 }
-
 .projectIndex,
 .projectTitle,
 .projectArrow {
-  font-size: 20px;
-  transition: all 0.35s ease;
+font-size: 20px;
+transition: all 0.35s ease;
 }
-
 .projectTitle {
-  font-weight: 400;
+font-weight: 400;
 }
-
 .projectItem:hover .projectTitle {
-  color: #ffffff;
+color: #ffffff;
 }
-
 .projectArrow {
-  opacity: 0.6;
-  transform: translateX(0);
+opacity: 0.6;
+transform: translateX(0);
 }
-
 .projectItem:hover .projectArrow {
-  opacity: 1;
-  transform: translateX(12px);
-  color: #ffffff;
+opacity: 1;
+transform: translateX(12px);
+color: #ffffff;
 }
-
-
 #contact {
-  background: #000;
+background: #000;
 }
-
 #contact h2 {
-  font-size: 24px;
-  margin-bottom: 30px;
+font-size: 24px;
+margin-bottom: 30px;
 }
-
 #contact-form div {
-  margin-bottom: 20px;
+margin-bottom: 20px;
 }
-
 #contact-form label {
-  display: block;
-  font-size: 14px;
-  color: #bbbbbb;
-  margin-bottom: 8px;
+display: block;
+font-size: 14px;
+color: #bbbbbb;
+margin-bottom: 8px;
 }
-
 #contact-form input,
 #contact-form textarea {
-  width: 100%;
-  background: #111;
-  border: 1px solid #333;
-  color: #fff;
-  padding: 12px;
-  font-size: 14px;
-  font-family: sans-serif;
-  outline: none;
-  transition: border-color 0.3s;
+width: 100%;
+background: #111;
+border: 1px solid #333;
+color: #fff;
+padding: 12px;
+font-size: 14px;
+font-family: sans-serif;
+outline: none;
+transition: border-color 0.3s;
 }
-
 #contact-form input:focus,
 #contact-form textarea:focus {
-  border-color: #666;
+border-color: #666;
 }
-
 #contact-form button {
-  background: #fff;
-  color: #000;
-  border: none;
-  padding: 12px 28px;
-  font-size: 14px;
-  cursor: pointer;
-  transition: all 0.3s;
+background: #fff;
+color: #000;
+border: none;
+padding: 12px 28px;
+font-size: 14px;
+cursor: pointer;
+transition: all 0.3s;
 }
-
-
 #fragments {
-  height: 100vh;
-  position: relative;
-  background-color: black;
-  overflow: hidden;
-
+height: 100vh;
+position: relative;
+background-color: black;
+overflow: hidden;
 }
 
-.myimages{
+/* ============== CHANGES START HERE ============== */
+/* Make all images responsive by default */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Fix for the floating images in Fragments section on mobile */
+.myimages {
     position: absolute;
-    width: 130px;
+    width: 130px;                  /* kept original desktop size */
+    max-width: 28%;                /* NEW: prevents overflow on small screens */
     cursor: pointer;
     transition: transform 0.4s ease;
-
-    
 }
+
+/* Optional: Slightly smaller images on very small screens */
+@media (max-width: 480px) {
+    .myimages {
+        max-width: 22%;            /* NEW: better fit on phones */
+    }
+}
+/* ============== CHANGES END HERE ============== */
 
 .myimages:hover {
-    transform: scale(1.35) rotate(3deg);  
-    animation: shake 0.5s ease-in-out;
-    z-index: 20;
-   
+transform: scale(1.35) rotate(3deg);
+animation: shake 0.5s ease-in-out;
+z-index: 20;
 }
-
-
 @keyframes shake {
-    0%   { transform: scale(1.35) rotate(-3deg); }
-    20%  { transform: scale(1.35) rotate(4deg); }
-    40%  { transform: scale(1.35) rotate(-4deg); }
-    60%  { transform: scale(1.35) rotate(3deg); }
-    80%  { transform: scale(1.35) rotate(-2deg); }
-    100% { transform: scale(1.35) rotate(3deg); }
+0% { transform: scale(1.35) rotate(-3deg); }
+20% { transform: scale(1.35) rotate(4deg); }
+40% { transform: scale(1.35) rotate(-4deg); }
+60% { transform: scale(1.35) rotate(3deg); }
+80% { transform: scale(1.35) rotate(-2deg); }
+100% { transform: scale(1.35) rotate(3deg); }
 }
 .imgfrg {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #222;
-  padding: 20px;
-  width: 300px;
-  border-radius: 10px;
-  color: white;
-  text-align: center;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-  z-index: 1000; /* Ensure it stays on top of everything */
+display: none;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: #222;
+padding: 20px;
+width: 300px;
+border-radius: 10px;
+color: white;
+text-align: center;
+box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+z-index: 1000;
 }
-
 .imgfrg:target {
-  display: block;
+display: block;
 }
-
 .close {
-  float: right;
-  font-size: 28px;
-  color: white;
-  text-decoration: none;
+float: right;
+font-size: 28px;
+color: white;
+text-decoration: none;
 }
 </style>
 </head>
 <body>
-
 <header>
-  <h1>Pritam</h1>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-    <a href="#fragments">Fragments</a>
-  </nav>
+<h1>Pritam</h1>
+<nav>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+<a href="#fragments">Fragments</a>
+</nav>
 </header>
-
 <div class="hero"></div>
-
 <section id="about">
-  <div class="aboutContent">
-    <div class="aboutLabel">( About me )</div>
-    <p class="aboutText">
-
+<div class="aboutContent">
+<div class="aboutLabel">( About me )</div>
+<p class="aboutText">
       I’m Pritam, a 19-year-old still figuring things out—but with a clear sense of what I’m moving towards.
-
 I have a lot of dreams, but they all point in one direction: building something meaningful in the world of AI. The goal is to one day create an AI SaaS startup, something that solves real problems and actually matters. Right now, I’m in the phase where I’m learning, experimenting, and slowly connecting the dots.
-
 I’ve been learning Python and Java, both in and outside the classroom, and I’m currently diving deeper into mathematics for machine learning. Math has always been something I genuinely enjoy—almost like a reset button. When things get overwhelming, I go back to solving problems. It’s a habit I picked up when I was younger: if you can solve something complex on paper, maybe you can solve what life throws at you too. It doesn’t always make things easier—but it helps me keep going.
-
 Lately, I’ve been studying through online resources, textbooks, and courses, including the Machine Learning Specialization by Andrew Ng. Alongside that, I’m continuing to strengthen my programming skills and understand how everything connects in practice.
-
 Outside of tech, I enjoy cricket—and I tend to lose track of time when I’m deeply focused on something I care about. That’s something I’m learning to use as a strength.
-
 I’m also planning to step into content creation and start participating in hackathons, putting my skills to the test and learning by building. This is all part of the process.
-
 I don’t have everything figured out yet. But I’m learning, showing up, and moving forward—one step at a time.
-
-    </p>
-  </div>
+</p>
+</div>
 </section>
 <section id="projects">
-  <div id="projectsTitle">MY WORKS - click on them to go to github</div>
-  
-  <div class="projects">
-    
-    <a href="https://github.com/pritammmmm101/wdpassjva" 
-       class="projectItem" 
-       target="_blank">
-      <div class="projectBg" style="background-image:url('psw.png');"></div>
-      <div class="projectContent">
-        <span class="projectIndex">00–01</span>
-        <span class="projectTitle">oop password generator</span>
-        <span class="projectArrow">→</span>
-      </div>
-    </a>
-
-    <a href="https://github.com/yourusername/ldn-underground" 
-       class="projectItem" 
-       target="_blank">
-      <div class="projectBg" style="background-image:url('djx.png');"></div>
-      <div class="projectContent">
-        <span class="projectIndex">00–02</span>
-        <span class="projectTitle">ldn Underground</span>
-        <span class="projectArrow">→</span>
-      </div>
-    </a>
-
-    <a href="https://github.com/pritammmmm101/wdfiltalg" 
-       class="projectItem" 
-       target="_blank">
-      <div class="projectBg" style="background-image:url('flt.png');"></div>
-      <div class="projectContent">
-        <span class="projectIndex">00–03</span>
-        <span class="projectTitle">filt</span>
-        <span class="projectArrow">→</span>
-      </div>
-    </a>
-
-    <a href="https://github.com/pritammmmm101/wdsortalg" 
-       class="projectItem" 
-       target="_blank">
-      <div class="projectBg" style="background-image:url('srt.png');"></div>
-      <div class="projectContent">
-        <span class="projectIndex">00–04</span>
-        <span class="projectTitle">Sort</span>
-        <span class="projectArrow">→</span>
-      </div>
-    </a>
-
-    <a href="https://github.com/yourusername/blogs" 
-       class="projectItem" 
-       target="_blank">
-      <div class="projectBg" style="background-image:url('bl.png');"></div>
-      <div class="projectContent">
-        <span class="projectIndex">00–05</span>
-        <span class="projectTitle">blogs</span>
-        <span class="projectArrow">→</span>
-      </div>
-    </a>
-
-  </div>
+<div id="projectsTitle">MY WORKS - click on them to go to github</div>
+<div class="projects">
+<a href="https://github.com/pritammmmm101/wdpassjva"
+class="projectItem"
+target="_blank">
+<div class="projectBg" style="background-image:url('psw.png');"></div>
+<div class="projectContent">
+<span class="projectIndex">00–01</span>
+<span class="projectTitle">oop password generator</span>
+<span class="projectArrow">→</span>
+</div>
+</a>
+<a href="https://github.com/yourusername/ldn-underground"
+class="projectItem"
+target="_blank">
+<div class="projectBg" style="background-image:url('djx.png');"></div>
+<div class="projectContent">
+<span class="projectIndex">00–02</span>
+<span class="projectTitle">ldn Underground</span>
+<span class="projectArrow">→</span>
+</div>
+</a>
+<a href="https://github.com/pritammmmm101/wdfiltalg"
+class="projectItem"
+target="_blank">
+<div class="projectBg" style="background-image:url('flt.png');"></div>
+<div class="projectContent">
+<span class="projectIndex">00–03</span>
+<span class="projectTitle">filt</span>
+<span class="projectArrow">→</span>
+</div>
+</a>
+<a href="https://github.com/pritammmmm101/wdsortalg"
+class="projectItem"
+target="_blank">
+<div class="projectBg" style="background-image:url('srt.png');"></div>
+<div class="projectContent">
+<span class="projectIndex">00–04</span>
+<span class="projectTitle">Sort</span>
+<span class="projectArrow">→</span>
+</div>
+</a>
+<a href="https://github.com/yourusername/blogs"
+class="projectItem"
+target="_blank">
+<div class="projectBg" style="background-image:url('bl.png');"></div>
+<div class="projectContent">
+<span class="projectIndex">00–05</span>
+<span class="projectTitle">blogs</span>
+<span class="projectArrow">→</span>
+</div>
+</a>
+</div>
 </section>
-
 <section id="contact">
-  <h2>Get In Touch</h2>
-  <form id="contact-form">
-    <div>
-      <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" required placeholder="First Name" />
-    </div>
-    <div>
-      <label for="email">Your Email</label>
-      <input type="email" id="email" name="email" required placeholder="user505@example.com" />
-    </div>
-    <div>
-      <label for="message">Message</label>
-      <textarea id="message" name="message" required placeholder="Say hello..." rows="5"></textarea>
-    </div>
-    <button type="submit" id="submit-btn">Send Message</button>
-    <p id="form-status"></p>
-  </form>
-
-  <script>
-
-
-
+<h2>Get In Touch</h2>
+<form id="contact-form">
+<div>
+<label for="name">Your Name</label>
+<input type="text" id="name" name="name" required placeholder="First Name" />
+</div>
+<div>
+<label for="email">Your Email</label>
+<input type="email" id="email" name="email" required placeholder="user505@example.com" />
+</div>
+<div>
+<label for="message">Message</label>
+<textarea id="message" name="message" required placeholder="Say hello..." rows="5"></textarea>
+</div>
+<button type="submit" id="submit-btn">Send Message</button>
+<p id="form-status"></p>
+</form>
+<script>
 const SUPABASE_URL = "https://exbjdgaufzhsreoyummg.supabase.co";
 const SUPABASE_ANON = "sb_publishable_cuGfdTgXywToArxSiQbOLA_lGQQC2kF";
-
 document.getElementById("contact-form").addEventListener("submit", async (event) => {
-  event.preventDefault();
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
-  const btn = document.getElementById("submit-btn");
-  const status = document.getElementById("form-status");
-
-  btn.disabled = true;
-  btn.textContent = "Sending...";
-  status.textContent = "";
-
-  try {
-    const response = await fetch(
-      `${SUPABASE_URL}/rest/v1/contact_messages`,
+event.preventDefault();
+const name = document.getElementById("name").value.trim();
+const email = document.getElementById("email").value.trim();
+const message = document.getElementById("message").value.trim();
+const btn = document.getElementById("submit-btn");
+const status = document.getElementById("form-status");
+btn.disabled = true;
+btn.textContent = "Sending...";
+status.textContent = "";
+try {
+const response = await fetch(
+`${SUPABASE_URL}/rest/v1/contact_messages`,
       {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "apikey": SUPABASE_ANON,
-          "Authorization": `Bearer ${SUPABASE_ANON}`,
-          "Prefer": "return=minimal"
+method: "POST",
+headers: {
+"Content-Type": "application/json",
+"apikey": SUPABASE_ANON,
+"Authorization": `Bearer ${SUPABASE_ANON}`,
+"Prefer": "return=minimal"
         },
-        body: JSON.stringify({ name, email, message })
+body: JSON.stringify({ name, email, message })
       }
     );
-
-     if (response.ok) {
-      status.textContent = " ✓ Message sent! I will be in touch soon.";
-      status.style.color = "#1A7A4A";
-      event.target.reset();
+if (response.ok) {
+status.textContent = " ✓ Message sent! I will be in touch soon.";
+status.style.color = "#1A7A4A";
+event.target.reset();
     } else {
-      const err = await response.json();
-      console.error("Supabase error:", err);
-      status.textContent = "Something went wrong. Please try again.";
-      status.style.color = "#DC2626";
+const err = await response.json();
+console.error("Supabase error:", err);
+status.textContent = "Something went wrong. Please try again.";
+status.style.color = "#DC2626";
     }
   } catch (networkError) {
-    console.error("Network error:", networkError);
-    status.textContent = "Could not connect. Check your internet connection.";
-    status.style.color = "#DC2626";
+console.error("Network error:", networkError);
+status.textContent = "Could not connect. Check your internet connection.";
+status.style.color = "#DC2626";
   } finally {
-    btn.disabled = false;
-    btn.textContent = "Send Message";
+btn.disabled = false;
+btn.textContent = "Send Message";
   }
 });
 </script>
 </section>
-
-
-
 <section id="fragments">
-  <a href="#about"><img src="1.png" class="myimages" style="left: 40%; top: 50%; width: 30%;"></a>
-  
-  <a href="#imgfrg2"><img src="10.png" class="myimages" style="left: 12%; top: 7%;"></a>
-  <a href="#imgfrg3"><img src="3.png" class="myimages" style="left: 82%; top: 15%;"></a>
+<a href="#about"><img src="1.png" class="myimages" style="left: 40%; top: 50%; width: 30%;"></a>
+<a href="#imgfrg2"><img src="10.png" class="myimages" style="left: 12%; top: 7%;"></a>
+<a href="#imgfrg3"><img src="3.png" class="myimages" style="left: 82%; top: 15%;"></a>
 <a href="#contact"><img src="4.png" class="myimages" style="left: 5%; top: 42%;"></a>
-  <a href="#imgfrg5"><img src="5.png" class="myimages" style="left: 60%; top: 82%;"></a>
-  <a href="#imgfrg6"><img src="6.png" class="myimages" style="left: 88%; top: 48%;"></a>
-  <a href="#imgfrg7"><img src="7.png" class="myimages" style="left: 15%; top: 85%;"></a>
-  <a href="#imgfrg8"><img src="2.png" class="myimages" style="left: 35%; top: 12%;"></a>
-  <a href="#imgfrg9"><img src="9.png" class="myimages" style="left: 62%; top: 5%;"></a>
-  <a href="#imgfrg10"><img src="12.png" class="myimages" style="left: 22%; top: 60%;"></a>
-  <a href="#imgfrg11"><img src="13.png" class="myimages" style="left: 80%; top: 68%;"></a>
-  <a href="#imgfrg14"><img src="14.png" class="myimages" style="left: 40%; top: 88%;"></a>
-  <a href="#imgfrgx"><img src="15.png" class="myimages" style="left: 55%; top: 22%;"></a>
+<a href="#imgfrg5"><img src="5.png" class="myimages" style="left: 60%; top: 82%;"></a>
+<a href="#imgfrg6"><img src="6.png" class="myimages" style="left: 88%; top: 48%;"></a>
+<a href="#imgfrg7"><img src="7.png" class="myimages" style="left: 15%; top: 85%;"></a>
+<a href="#imgfrg8"><img src="2.png" class="myimages" style="left: 35%; top: 12%;"></a>
+<a href="#imgfrg9"><img src="9.png" class="myimages" style="left: 62%; top: 5%;"></a>
+<a href="#imgfrg10"><img src="12.png" class="myimages" style="left: 22%; top: 60%;"></a>
+<a href="#imgfrg11"><img src="13.png" class="myimages" style="left: 80%; top: 68%;"></a>
+<a href="#imgfrg14"><img src="14.png" class="myimages" style="left: 40%; top: 88%;"></a>
+<a href="#imgfrgx"><img src="15.png" class="myimages" style="left: 55%; top: 22%;"></a>
 </section>
-
 <div class="imgfrg" id="imgfrg2" style="top: 20%; left: 25%; width: 30%;"><a href="#fragments" class="close">×</a><h2>ML journey so far</h2><p>
   Self-taught Machine Learning enthusiast on a mission.</p>
 <p>I love building small ML projects and watching models learn from data.</p>
@@ -515,9 +452,8 @@ document.getElementById("contact-form").addEventListener("submit", async (event)
 <div class="imgfrg" id="imgfrg3" style="top: 30%; left: 70%;"><a href="#fragments" class="close">×</a><h2>Spotify</h2><p>
 Music is my daily fuel.
 My taste is all over the place
-open spotify 
+open spotify
 </p></div>
-
 <div class="imgfrg" id="imgfrg5" style="top: 75%; left: 80%;"><a href="#fragments" class="close">×</a><h2>3:00 </h2><p>This is when i either go to sleep or wake up</p></div>
 <div class="imgfrg" id="imgfrg6" style="top: 40%; left: 80%;"><a href="#fragments" class="close">×</a><h2>Title: Movies & Cinema 🎥
 Content:
@@ -528,7 +464,5 @@ Content:
 <div class="imgfrg" id="imgfrg8" style="top: 15%; left: 55%;"><a href="#fragments" class="close">×</a><h2>screen</h2><p>avg screen time of 12hr</p></div>
 <div class="imgfrg" id="imgfrg9" style="top: 55%; left: 40%;"><a href="#fragments" class="close">×</a><h2>looking for intern </h2><p>if you really like my work , help me refering to an intern</p></div>
 </section>
-
-
 </body>
 </html>
